@@ -1,0 +1,34 @@
+{
+    "name": "bdogan/php-cli-database-tools",
+    "authors": [
+        {
+            "name": "Burak Doğan",
+            "email": "bdogan85@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+      {
+        "type":"package",
+        "package": {
+          "name": "bdogan/php-database-tools",
+          "version": "1.5",
+          "source": {
+            "url": "https://github.com/bdogan/php-database-tools.git",
+            "type": "git",
+            "reference":"master"
+          }
+        }
+      }
+    ],
+    "require": {
+      "bdogan/php-database-tools": "1.5",
+      "corneltek/cliframework": "*"
+    },
+    "autoload": {
+        "psr-4": {
+          "PhpDatabaseTools\\": "vendor/bdogan/php-database-tools/src/PhpDatabaseTools",
+          "PhpDatabaseToolsCli\\": "src/PhpDatabaseToolsCli"
+        }
+    }
+}
