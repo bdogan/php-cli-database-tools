@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "306683454e1d433cd6105682983a8f95",
+    "hash": "8fab8d5ddf4cbff69955226fd8b35772",
     "packages": [
         {
             "name": "bdogan/php-database-tools",
-            "version": "1.4",
+            "version": "1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bdogan/php-database-tools.git",
@@ -262,12 +262,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "2bcd90124a31bcf61804b9eb5badb85679469921"
+                "reference": "976f9b385ff8e850e967ba6dd99071df11488f17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/2bcd90124a31bcf61804b9eb5badb85679469921",
-                "reference": "2bcd90124a31bcf61804b9eb5badb85679469921",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/976f9b385ff8e850e967ba6dd99071df11488f17",
+                "reference": "976f9b385ff8e850e967ba6dd99071df11488f17",
                 "shasum": ""
             },
             "require": {
@@ -300,7 +300,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2015-01-26 16:18:50"
+            "time": "2015-05-29 22:13:37"
         },
         {
             "name": "twig/twig",

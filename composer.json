@@ -12,7 +12,7 @@
         "type":"package",
         "package": {
           "name": "bdogan/php-database-tools",
-          "version": "1.6.2",
+          "version": "1.6.3",
           "source": {
             "url": "https://github.com/bdogan/php-database-tools.git",
             "type": "git",
@@ -22,7 +22,7 @@
       }
     ],
     "require": {
-      "bdogan/php-database-tools": "1.6.2",
+      "bdogan/php-database-tools": "1.6.3",
       "corneltek/cliframework": "*"
     },
     "autoload": {

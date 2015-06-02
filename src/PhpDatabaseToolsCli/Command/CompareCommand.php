@@ -19,6 +19,7 @@ class CompareCommand extends Command {
     $opts->add('server2:', 'Target database server \'user:pass@host\'');
     $opts->add('referance:', 'Referance database')->isa('string');
     $opts->add('target:', 'Target database')->isa('string');
+    $opts->add('ignore-table:', 'Ignore target table if exists')->isa('string');
     $opts->add('only-check', 'Only Check');
   }
 
@@ -43,6 +44,14 @@ class CompareCommand extends Command {
 
     $Generator = new PhpDatabaseTools\Generator();
 
+    if (!empty($this->options->{'ignore-table'}))
+    {
+      $ignoreTable = $this->options->{'ignore-table'};
+      $ignoreTable = trim(str_replace(" ", "", $ignoreTable));
+      $ignoreTable = explode(",", $ignoreTable);
+      PhpDatabaseTools\Compare::setIgnoreTable($ignoreTable);
+    }
+
     $refDbSchema = $Generator->Generate($server1);
     $targetDbSchema = $Generator->Generate($server2);
 
@@ -50,7 +59,7 @@ class CompareCommand extends Command {
     {
       echo PhpDatabaseTools\Compare::revisionSql($refDbSchema, $targetDbSchema);
     }
-    
+
   }
 
 }
