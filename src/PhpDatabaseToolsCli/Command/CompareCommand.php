@@ -20,6 +20,7 @@ class CompareCommand extends Command {
     $opts->add('referance:', 'Referance database')->isa('string');
     $opts->add('target:', 'Target database')->isa('string');
     $opts->add('ignore-table:', 'Ignore target table if exists')->isa('string');
+    $opts->add('one-way?', 'One way upgrade only target -> referance');
     $opts->add('only-check', 'Only Check');
   }
 
@@ -51,6 +52,11 @@ class CompareCommand extends Command {
       $ignoreTable = explode(",", $ignoreTable);
       PhpDatabaseTools\Compare::setIgnoreTable($ignoreTable);
     }
+
+    if ($this->options->{'one-way'})
+      PhpDatabaseTools\Compare::enableOneWayUpdate();
+    else
+      PhpDatabaseTools\Compare::disableOneWayUpdate();
 
     $refDbSchema = $Generator->Generate($server1);
     $targetDbSchema = $Generator->Generate($server2);
